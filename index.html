@@ -18,96 +18,62 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				<h2>Seguimos con numeros complejos</h2>
-				<p>No hay remate ni título lindo.</p>
-			</section>
-
-			<section>
-				<h2>Ejercicio 14</h2>
-				<p>La suma de un número complejo y su conjugado es \( \color{springgreen}-8 \) y la suma de sus módulos
-					es \( \color{springgreen}10 \).</p>
-				<p>¿De qué números complejos se trata?</p>
-			</section>
-
-			<section>
-				<h2>14: Propiedades utilizadas</h2>
-				<ul class="text-sm">
-					<li class="fragment"><strong>Suma de un complejo y su conjugado:</strong><br>
-						Si $$ z = a + bi $$
-						<b>entonces</b>
-						$$ \bar{z} = a - bi $$
-						$$ z + \bar{z} = 2a $$
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>14: Propiedades utilizadas</h2>
-				<ul class="text-sm">
-					<li class="fragment"><strong>Módulo de un número complejo:</strong> <br>
-						$$ |z| = \sqrt{a^2 + b^2}, \quad |\bar{z}| = \sqrt{a^2 + b^2} $$
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>14: Propiedades utilizadas</h2>
-				<ul class="text-sm">
-					<li style="list-style-type: none;">
-						<strong>
-							🤔 ¿A cuál de los dos le doy el signo + y a cuál el -?
-						</strong>
-					</li>
-					<li class="fragment">
-						<p>¡No importa! Ambos son conjugados el uno del otro</p>
-					</li>
-					<li class="fragment">
-						<p>Lo importante es tener ambos números como conjugados, no cuál es cuál</p>
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Ejercicio 15</h2>
-				<p>Encuentre los valores reales de \( x \) e \( y \) tales que</p>
-				<ul>
-					$$ \textbf{a)} \quad x - 15i = 9 + 5yi $$
-					$$ \textbf{b)} \quad 2x + 3yi = 6 + yi $$
-				</ul>
-			</section>
-
-			<section>
-				<h2>15: Propiedades utilizadas</h2>
-				<ul class="text-sm">
-					<li><strong>Igualdad entre números complejos:</strong> <br>
-						$$ a + bi = c + di \quad \Longleftrightarrow \quad a = c \text{ y } b = d $$
-					</li>
-					<li class="fragment"><strong>Aplicación:</strong> <br>
-						podemos separar parte real e imaginaria en ambos miembros de la ecuación y resolver como un
-						sistema de ecuaciones reales.
-					</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Resolvamos</h2>
-				<div>
-					<img src="https://i.gifer.com/BjH9.gif" alt="homero-gif">
-				</div>
-			</section>
-
-			<section>
-				<h2>Bueno no mucho más</h2>
-				<ul class="text-sm">
-					<li class="fragment" style="list-style-type: none;"" >No encontramos memes</li>
-				</ul>
-			</section>
 			
-			<section>
-				<img
-					src=" https://pbs.twimg.com/media/D4tHZIqWwAEZhel.jpg:large" alt="chiste" style="width: 100%; height: auto;">
-			</section>
+<section>
+    <h2>Relaciones en A</h2>
+    <p>Propiedades de relaciones bajo operaciones de conjunto</p>
+</section>
+
+<section>
+    <h2>Ejercicio 17</h2>
+    <ul>
+        <li>Sean <span style="font-style: italic">R</span> y <span style="font-style: italic">S</span> relaciones en <span style="font-style: italic">A</span>. Probar que:</li>
+        <li>a) Si \( R \subseteq S \Rightarrow R^{-1} \subseteq S^{-1} \)</li>
+        <li>b) Si \( R \) y \( S \) son reflexivas, entonces \( R \cup S \) y \( R \cap S \) también lo son</li>
+        <li>c) Si \( R \) y \( S \) son simétricas, entonces \( R \cup S \) y \( R \cap S \) también lo son</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Parte a)</h2>
+    <p>Si \( R \subseteq S \Rightarrow R^{-1} \subseteq S^{-1} \)</p>
+    <ul style="font-size: 0.9em">
+        <li class="fragment">Sea \( (a,b) \in R^{-1} \Rightarrow (b,a) \in R \)</li>
+        <li class="fragment">Como \( R \subseteq S \Rightarrow (b,a) \in S \Rightarrow (a,b) \in S^{-1} \)</li>
+        <li class="fragment">Por lo tanto, \( (a,b) \in S^{-1} \Rightarrow R^{-1} \subseteq S^{-1} \)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Parte b) - Reflexividad</h2>
+    <p>Si \( R \) y \( S \) son reflexivas:</p>
+    <ul style="font-size: 0.9em">
+        <li class="fragment">\( \forall a \in A, (a,a) \in R \land (a,a) \in S \)</li>
+        <li class="fragment">Entonces \( (a,a) \in R \cup S \) y \( (a,a) \in R \cap S \)</li>
+        <li class="fragment">\( \Rightarrow R \cup S \) y \( R \cap S \) son reflexivas</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Parte c) - Simetría</h2>
+    <p>Si \( R \) y \( S \) son simétricas:</p>
+    <ul style="font-size: 0.9em">
+        <li class="fragment">Sea \( (a,b) \in R \cup S \)</li>
+        <li class="fragment">Si \( (a,b) \in R \Rightarrow (b,a) \in R \subseteq R \cup S \)</li>
+        <li class="fragment">Si \( (a,b) \in S \Rightarrow (b,a) \in S \subseteq R \cup S \)</li>
+        <li class="fragment">\( \Rightarrow R \cup S \) es simétrica</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Simetría en \( R \cap S \)</h2>
+    <ul style="font-size: 0.9em">
+        <li class="fragment">Sea \( (a,b) \in R \cap S \Rightarrow (a,b) \in R \land (a,b) \in S \)</li>
+        <li class="fragment">\( \Rightarrow (b,a) \in R \land (b,a) \in S \Rightarrow (b,a) \in R \cap S \)</li>
+        <li class="fragment">\( \therefore R \cap S \) es simétrica</li>
+    </ul>
+</section>
+
 		</div>
 	</div>
 
