@@ -18,112 +18,77 @@
     <body>
         <div class="reveal">
             <div class="slides">
-
                 <section>
-                    <h1>Relaciones en conjuntos</h1>
-                    <p>Reflexividad, Simetría e Inversas</p>
-                    <p>
-                        <small>\(Bonoris \cup Yalet\)</small>
-                    </p>
+                    <h2>Relaciones entre conjuntos</h2>
+                    <p>Hoy: clases de equivalencia y conjunto cociente</p>
                 </section>
 
                 <section>
-                    <h2>Relaciones en A</h2>
-                    <p>Propiedades de relaciones bajo operaciones de conjunto</p>
-                </section>
-
-                <section>
-                    <h2>Ejercicio 17</h2>
-                    <p>Sean <span style="font-style: italic">R</span> y <span style="font-style: italic">S</span> relaciones en <span style="font-style: italic">A</span>. Probar que:</p>
-                    <ul style="font-size: 0.9em; list-style-type: none;">
-                        <li>a) Si \( R \subseteq S \Rightarrow R^{-1} \subseteq S^{-1} \)</li>
-                        <li>b) Si \( R \) y \( S \) son reflexivas, entonces \( R \cup S \) y \( R \cap S \) también lo son</li>
-                        <li>c) Si \( R \) y \( S \) son simétricas, entonces \( R \cup S \) y \( R \cap S \) también lo son</li>
+                    <h2>Relación de equivalencia</h2>
+                    <p>Una relación R sobre un conjunto A es de equivalencia si cumple:</p>
+                    <ul style="font-size: 0.9em">
+                        <li class="fragment">Reflexividad: ∀a ∈ A, (a, a) ∈ R</li>
+                        <li class="fragment">Simetría: (a, b) ∈ R ⇒ (b, a) ∈ R</li>
+                        <li class="fragment">Transitividad: (a, b) ∈ R ∧ (b, c) ∈ R ⇒ (a, c) ∈ R</li>
                     </ul>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Parte A</h2>
-                        <p>Si \( R \subseteq S \Rightarrow R^{-1} \subseteq S^{-1} \)</p>
-                        <ul style="font-size: 0.9em">
-                            <li class="fragment">Sea \( (a,b) \in R^{-1} \Rightarrow (b,a) \in R \)</li>
-                            <li class="fragment">Como \( R \subseteq S \Rightarrow (b,a) \in S \Rightarrow (a,b) \in S^{-1} \)</li>
-                            <li class="fragment">Por lo tanto, \( (a,b) \in S^{-1} \Rightarrow R^{-1} \subseteq S^{-1} \)</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>Inversas y Subconjuntos</h2>
-                        <p>
-                            <strong>Sea</strong> \( A = \{1, 2\} \)</p>
-                        <p>\[
-        R \subseteq S \Rightarrow R^{-1} \subseteq S^{-1}
-      \]</p>
-                        <p>
-                            <strong>Demostración:</strong> Si \( (b,a) \in R \), entonces \( (b,a) \in S \) y por lo tanto \( (a,b) \in S^{-1} \)</p>
-                        <p>
-                            <strong>Ejemplo:</strong> \( R = \{(1,2)\}, S = \{(1,2),(2,1)\} \)</p>
-                    </section>
+                    <h2>Clases de equivalencia</h2>
+                    <p>Dada una relación de equivalencia R en A, la clase de equivalencia de un elemento a ∈ A es:</p>
+                    <p style="font-size: 0.95em">$$ [a] = \{ x \in A \mid (a,x) \in R \} $$</p>
+                    <p class="fragment">Todos los elementos que están relacionados con a</p>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Parte B - Reflexividad</h2>
-                        <p>Si \( R \) y \( S \) son reflexivas:</p>
-                        <ul style="font-size: 0.9em">
-                            <li class="fragment">\( \forall a \in A, (a,a) \in R \land (a,a) \in S \)</li>
-                            <li class="fragment">Entonces \( (a,a) \in R \cup S \) y \( (a,a) \in R \cap S \)</li>
-                            <li class="fragment">\( \Rightarrow R \cup S \) y \( R \cap S \) son reflexivas</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Reflexividad</h2>
-                        <p>
-                            <strong>Sea</strong> \( A = \{1, 2\} \)</p>
-                        <p>\[
-        R, S \text{ reflexivas } \Rightarrow R \cup S, R \cap S \text{ también lo son}
-      \]</p>
-                        <p>
-                            <strong>Demostración:</strong> Si \( (a,a) \in R \) y \( (a,a) \in S \), entonces está en ambas combinaciones</p>
-                        <p>
-                            <strong>Ejemplo:</strong> \( R = \{(1,1), (2,2), (1,2)\} \), \( S = \{(1,1), (2,2), (2,1)\} \)</p>
-                    </section>
+                    <h2>Representantes</h2>
+                    <p>Un representante de una clase de equivalencia es simplemente un elemento cualquiera de la clase.</p>
+                    <p class="fragment">Toda clase tiene infinitos representantes, todos equivalentes entre sí.</p>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Parte C - Simetría</h2>
-                        <p>Si \( R \) y \( S \) son simétricas:</p>
-                        <ul style="font-size: 0.9em">
-                            <li class="fragment">Sea \( (a,b) \in R \cup S \)</li>
-                            <li class="fragment">Si \( (a,b) \in R \Rightarrow (b,a) \in R \subseteq R \cup S \)</li>
-                            <li class="fragment">Si \( (a,b) \in S \Rightarrow (b,a) \in S \subseteq R \cup S \)</li>
-                            <li class="fragment">\( \Rightarrow R \cup S \) es simétrica</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Simetría en \( R \cap S \)</h2>
-                        <ul style="font-size: 0.9em">
-                            <li class="fragment">Sea \( (a,b) \in R \cap S \Rightarrow (a,b) \in R \land (a,b) \in S \)</li>
-                            <li class="fragment">\( \Rightarrow (b,a) \in R \land (b,a) \in S \Rightarrow (b,a) \in R \cap S \)</li>
-                            <li class="fragment">\( \therefore R \cap S \) es simétrica</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Simetría</h2>
-                        <p>
-                            <strong>Sea</strong> \( A = \{1, 2\} \)</p>
-                        <p>\[
-        R, S \text{ simétricas } \Rightarrow R \cup S, R \cap S \text{ también lo son}
-      \]</p>
-                        <p>
-                            <strong>Demostración:</strong> Si \( (a,b) \in R \Rightarrow (b,a) \in R \), lo mismo aplica a \( S \)</p>
-                        <p>
-                            <strong>Ejemplo:</strong> \( R = \{(1,2),(2,1)\}, S = \{(1,2),(2,1),(1,1)\} \)</p>
-                    </section>
+                    <h2>Ejemplo válido</h2>
+                    <p>Sea A el conjunto de rectas del plano. Definimos R por:</p>
+                    <p>$$ r \sim s \iff r \text{ es paralela a } s $$</p>
+                    <ul style="font-size: 0.9em">
+                        <li class="fragment">Reflexiva: toda recta es paralela a sí misma</li>
+                        <li class="fragment">Simétrica: si r es paralela a s, entonces s es paralela a r</li>
+                        <li class="fragment">Transitiva: si r || s y s || t, entonces r || t</li>
+                    </ul>
                 </section>
 
+                <section>
+                    <h2>Ejemplo incorrecto</h2>
+                    <p>Sea A el conjunto de rectas. Definimos:</p>
+                    <p>$$ r \sim s \iff r \text{ es perpendicular a } s $$</p>
+                    <ul style="font-size: 0.9em">
+                        <li class="fragment">No es reflexiva: ninguna recta es perpendicular a sí misma</li>
+                        <li class="fragment">No es transitiva: si r ⟂ s y s ⟂ t, r puede ser paralela a t</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Particiones</h2>
+                    <p>Una <strong>partición</strong> de un conjunto A es una colección de subconjuntos no vacíos, disjuntos entre sí y cuya unión es A.</p>
+                    <ul style="font-size: 0.9em">
+                        <li class="fragment">Cada clase de equivalencia genera una partición</li>
+                        <li class="fragment">Y cada partición define una relación de equivalencia</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Relaciones de congruencia</h2>
+                    <p>Relaciones de equivalencia sobre estructuras con operaciones (como ℤ, ℕ, etc.)</p>
+                    <p class="fragment">Por ejemplo: $$ a \equiv b \, (\text{mod } n) \iff n \mid (a - b) $$</p>
+                    <p class="fragment">Particionan ℤ en clases de residuos</p>
+                </section>
+
+                <section>
+                    <h2>Conjunto cociente</h2>
+                    <p>Si R es una relación de equivalencia sobre A, el conjunto cociente se define como:</p>
+                    <p style="font-size: 0.95em">$$ A / R = \{ [a] \mid a \in A \} $$</p>
+                    <p class="fragment">Es el conjunto de todas las clases de equivalencia</p>
+                </section>
             </div>
         </div>
 
