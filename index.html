@@ -31,15 +31,34 @@
                 <p class="fragment">Esto se conoce como <strong>grupo producto</strong></p>
             </section>
 
+            <section data-background-image="/assets/images/explanation.jpg">
+                <h2>Ejemplo</h2>
+                <audio data-autoplay src="assets/audios/tutorial.mp3"></audio>
+            </section>
+
+            <section data-background-image="/assets/images/ejemplo.jpg">
+            </section>
+
             <section>
                 <h2>¿Qué queremos probar?</h2>
                 <p>Queremos probar que \( (G \times F, \bullet) \) es un grupo</p>
                 <p class="fragment">Es decir, que cumple:</p>
                 <ul style="font-size: 0.9em">
+                    <li class="fragment">Clausura</li>
                     <li class="fragment">Asociatividad</li>
                     <li class="fragment">Existe elemento neutro</li>
                     <li class="fragment">Existe inverso para cada elemento</li>
                 </ul>
+            </section>
+
+            <section>
+                <h2>Clausura</h2>
+                <p>Sean \((x,y),(z,t) \in G \times F\). Como \(x,z \in G\) y \(y,t \in F\), entonces:</p>
+                <ul>
+                    <li class="fragment">\(x \ast z \in G\) (porque \(G\) es grupo)</li>
+                    <li class="fragment">\(y \diamondsuit t \in F\) (porque \(F\) es grupo)</li>
+                </ul>
+                <p class="fragment">Por lo tanto \((x \ast z,y \diamondsuit t) \in G \times F\)</p>
             </section>
 
             <section>
@@ -112,8 +131,9 @@
 
             <section>
                 <h2>Conclusión</h2>
-                <p>Se cumplen las tres propiedades:</p>
+                <p>Se cumplen las cuatro propiedades:</p>
                 <ul style="font-size: 0.9em">
+                    <li class="fragment">✅ Clausura</li>
                     <li class="fragment">✅ Asociatividad</li>
                     <li class="fragment">✅ Neutro: \( (e_G, e_F) \)</li>
                     <li class="fragment">✅ Inverso: \( (x^{-1}, y^{-1}) \)</li>
