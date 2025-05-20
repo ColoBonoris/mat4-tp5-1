@@ -4,17 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>Relaciones en conjuntos</title>
-
-    <link href="https://fonts.cdnfonts.com/css/impact" rel="stylesheet">
-
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css">
-
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <title>Grupo Producto</title>
 </head>
 
 <body>
@@ -25,10 +15,19 @@
                 <p>Vamos a trabajar con el grupo producto</p>
             </section>
 
+            <section data-background-color="#f6eee3">
+                <p>10. Dados los Grupos \( (G, \ast) \) y \( (F, \diamondsuit) \) se define en el conjunto \(G \times
+                    F\) la ley \(\bullet\) tal que</p>
+                <p style="font-size: 1em">\[ (x, y) \bullet (z, t) = (x \ast z, y \diamondsuit t) \]</p>
+                <p>Probar que \( (G \times F, \bullet)\) es Grupo (<strong>Grupo Producto</strong>)</p>
+            </section>
+
             <section>
                 <h2>¿Qué es un grupo producto?</h2>
-                <p>Dados dos grupos \( (G, \ast) \) y \( (F, \diamond) \), el producto cartesiano \( G \times F \) se convierte en grupo si definimos:</p>
-                <p style="font-size: 1em">\[ (x, y) \bullet (z, t) = (x \ast z, y \diamond t) \]</p>
+                <p>Dados dos grupos \( (G, \ast) \) y \( (F, \diamondsuit) \), el producto cartesiano \( G \times F \)
+                    se
+                    convierte en grupo si definimos:</p>
+                <p style="font-size: 1em">\[ (x, y) \bullet (z, t) = (x \ast z, y \diamondsuit t) \]</p>
                 <p class="fragment">Esto se conoce como <strong>grupo producto</strong></p>
             </section>
 
@@ -44,29 +43,55 @@
             </section>
 
             <section>
-                <h2>Asociatividad</h2>
-                <p>Queremos ver si:</p>
-                <p style="font-size: 1em">\[ ((x, y) \bullet (z, t)) \bullet (u, v) = (x, y) \bullet ((z, t) \bullet (u, v)) \]</p>
-                <p class="fragment">Evaluamos ambos lados usando la definición de \( \bullet \):</p>
-                <ul style="font-size: 0.9em">
-                    <li class="fragment">\( (x, y) \bullet (z, t) = (x \ast z, y \diamond t) \)</li>
-                    <li class="fragment">Luego: \( ((x \ast z) \ast u, (y \diamond t) \diamond v) \)</li>
-                    <li class="fragment">Del otro lado: \( (x \ast (z \ast u), y \diamond (t \diamond v)) \)</li>
-                </ul>
-                <p class="fragment">Como \( \ast \) y \( \diamond \) son asociativas, ambos lados coinciden.</p>
+                <section>
+                    <h2>Asociatividad</h2>
+                    <p>Queremos ver si:</p>
+                    <p>\[ ((x, y) \bullet (z, t)) \bullet (u, v) = (x, y) \bullet ((z, t) \bullet
+                        (u,
+                        v)) \]</p>
+                    <p class="fragment">Evaluamos ambos lados usando la definición de \( \bullet \):</p>
+                    <p class="fragment">\( (x, y) \bullet (z, t) = (x \ast z, y \diamondsuit t) \)</p>
+                </section>
+                <section>
+                    <p>Lado izquierdo</p>
+                    <p class="r-fit-text">\(((x \ast z, y \diamondsuit t) \bullet (u,v)) = ((x \ast z) \ast u,(y
+                        \diamondsuit t)
+                        \diamondsuit v)\)</p>
+                </section>
+                <section>
+                    <p>Lado derecho</p>
+                    <p class="r-fit-text">\((x , y) \bullet ((z \ast u, t \diamondsuit v))=(x \ast (z \ast u), y
+                        \diamondsuit (t \diamondsuit v))\)</p>
+                </section>
+                <section>
+                    <p>Como \(G\) y \(F\) son grupos sus operaciones \( \ast \) y \( \diamondsuit \) son asociativas,
+                        entonces ambos lados coinciden:</p>
+                    <ul>
+                        <li class="fragment">\((x \ast z) \ast u=x \ast (z \ast u)\)</li>
+                        <li class="fragment">\((y \diamondsuit t) \diamondsuit v = y \diamondsuit (t \diamondsuit v)\)
+                        </li>
+                    </ul>
+                </section>
             </section>
 
             <section>
-                <h2>Elemento neutro</h2>
-                <p>Sabemos que existen:</p>
-                <ul style="font-size: 0.9em">
-                    <li>\( e_G \in G \) tal que \( e_G \ast x = x \ast e_G = x \)</li>
-                    <li>\( e_F \in F \) tal que \( e_F \diamond y = y \diamond e_F = y \)</li>
-                </ul>
-                <p class="fragment">Definimos entonces el neutro del producto:</p>
-                <p style="font-size: 1em">\[ (e_G, e_F) \]</p>
-                <p class="fragment">Verificamos:</p>
-                <p class="fragment">\( (x, y) \bullet (e_G, e_F) = (x \ast e_G, y \diamond e_F) = (x, y) \)</p>
+                <section>
+                    <h2>Elemento neutro</h2>
+                    <p>Sabemos que existen:</p>
+                    <ul style="font-size: 0.9em">
+                        <li>\( e_G \in G \) tal que \( e_G \ast x = x \ast e_G = x \)</li>
+                        <li>\( e_F \in F \) tal que \( e_F \diamondsuit y = y \diamondsuit e_F = y \)</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Definimos entonces el neutro del producto:</p>
+                    <p class="fragment text-sm" style="font-size: 1em">\[ (e_G, e_F) \]</p>
+                </section>
+                <section>
+                    <p>Verificamos:</p>
+                    <p class="fragment">\( (x, y) \bullet (e_G, e_F) = (x \ast e_G, y \diamondsuit e_F) = (x, y) \)</p>
+                    <p class="fragment">\((e_G, e_F) \bullet (x, y) = (e_G \ast x, e_F \diamondsuit y) = (x, y)\)</p>
+                </section>
             </section>
 
             <section>
@@ -74,91 +99,43 @@
                 <p>Dado \( (x, y) \in G \times F \), existen:</p>
                 <ul style="font-size: 0.9em">
                     <li>\( x^{-1} \in G \) tal que \( x \ast x^{-1} = e_G \)</li>
-                    <li>\( y^{-1} \in F \) tal que \( y \diamond y^{-1} = e_F \)</li>
+                    <li>\( y^{-1} \in F \) tal que \( y \diamondsuit y^{-1} = e_F \)</li>
                 </ul>
-                <p class="fragment">Entonces:</p>
-                <p style="font-size: 1em">\[ (x^{-1}, y^{-1}) \text{ es el inverso de } (x, y) \]</p>
-                <p class="fragment">Porque:</p>
-                <p class="fragment">\( (x, y) \bullet (x^{-1}, y^{-1}) = (x \ast x^{-1}, y \diamond y^{-1}) = (e_G, e_F) \)</p>
+                <p class="fragment text-sm">Entonces:</p>
+                <p class="fragment text-sm">\[ (x^{-1}, y^{-1}) \text{ es el inverso de } (x, y) \]</p>
+                <p class="fragment text-sm">Porque:</p>
+                <p class="fragment r-fit-text">\( (x, y) \bullet (x^{-1}, y^{-1}) = (x \ast x^{-1}, y \diamondsuit
+                    y^{-1}) = (e_G,
+                    e_F)
+                    \)</p>
             </section>
 
             <section>
                 <h2>Conclusión</h2>
                 <p>Se cumplen las tres propiedades:</p>
                 <ul style="font-size: 0.9em">
-                    <li class="fragment">Asociatividad</li>
-                    <li class="fragment">Neutro: \( (e_G, e_F) \)</li>
-                    <li class="fragment">Inverso: \( (x^{-1}, y^{-1}) \)</li>
+                    <li class="fragment">✅ Asociatividad</li>
+                    <li class="fragment">✅ Neutro: \( (e_G, e_F) \)</li>
+                    <li class="fragment">✅ Inverso: \( (x^{-1}, y^{-1}) \)</li>
                 </ul>
                 <p class="fragment">Por lo tanto, \( (G \times F, \bullet) \) es un grupo</p>
             </section>
 
+            <section data-transition="zoom">
+                <h1>Meme forzado</h1>
+                <img src="assets/images/meme-forzado.jpg" style="width: 50%;" />
+            </section>
+
+            <section>
+                <h1>Muchas \(\bullet\) gracias</h1>
+                <audio data-autoplay src="assets/audios/closs-final.wav"></audio>
+            </section>
         </div>
     </div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script src="plugin/math/math.js"></script>
-    <script src="plugin/video/video.js"></script>
-    <script src="http://localhost:3001/socket.io/socket.io.js" async></script>
-    <script src="plugins/remote-control/remote.js" async></script>
-    <script>
-        // More info about initialization & config:
-        // - https://revealjs.com/initialization/
-        // - https://revealjs.com/config/
-        Reveal.initialize({
-            hash: true,
+    <script type="module" src="/src/main.js"></script>
 
-            // Learn about plugins: https://revealjs.com/plugins/
-            plugins: [RevealMath.KaTeX, RevealMarkdown, RevealHighlight, RevealNotes, RevealSegmentedVideo()]
-        });
-    </script>
 
-    <script>
-        function actualizarHora() {
-            const ahora = new Date();
-            const horas = ahora.getHours().toString().padStart(2, '0');
-            const minutos = ahora.getMinutes().toString().padStart(2, '0');
-            const horaFormateada = `${horas}:${minutos}`;
-
-            const elementoHora = document.querySelector('.brand .time');
-            if (elementoHora) {
-                elementoHora.textContent = horaFormateada;
-            }
-        }
-
-        actualizarHora();
-        setInterval(actualizarHora, 60000); // Actualiza cada minuto
-    </script>
-    <script>
-        const diasSemana = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SAB'];
-        const meses = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
-
-        function obtenerFormatosFecha() {
-            const hoy = new Date();
-            const dia = hoy.getDate().toString().padStart(2, '0');
-            const mes = meses[hoy.getMonth()];
-            const diaSemana = diasSemana[hoy.getDay()];
-
-            return [`${dia} ${mes}`, `${diaSemana} ${dia}`];
-        }
-
-        const spanFecha = document.querySelector('.brand .date');
-        const [formato1, formato2] = obtenerFormatosFecha();
-        let mostrarPrimero = true;
-
-        function alternarFecha() {
-            if (spanFecha) {
-                spanFecha.textContent = mostrarPrimero ? formato1 : formato2;
-                mostrarPrimero = !mostrarPrimero;
-            }
-        }
-
-        alternarFecha(); // mostrar inmediatamente
-        setInterval(alternarFecha, 2000); // alternar cada 2 segundos
-    </script>
 
 </body>
 

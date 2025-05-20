@@ -1,3 +1,0 @@
-[submodule "plugins/remote-control"]
-	path = plugins/remote-control
-	url = https://github.com/rickgbw/reveal.js-remote-control-plugin
